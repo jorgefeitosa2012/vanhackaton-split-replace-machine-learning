@@ -15,7 +15,7 @@ WINDOWS: pip install nltk
 
 After this, in the code, uncomment the line 6 nltk.download('punkt') and execute the code, it will download the dictionary for english language
 
-When the code finish executin, comment the line 6 again, the dictionary will be installed in your computer 
+When the code finish executing, comment the line 6 again, the dictionary will be installed in your computer 
 
 In line 77 you can test different texts as you want:
 
