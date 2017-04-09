@@ -27,7 +27,6 @@ Pre-requisites
 =======
  - Python 2.7 or above
  
-Todo
-====
-
-Put the unknow words to be uppercase
+Update
+=======
+Now words that are not inside the dictionary are printed as uppercase

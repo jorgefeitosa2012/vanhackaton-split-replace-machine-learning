@@ -55,6 +55,12 @@ def product(nums):
         result *= x
     return result
 
+def isValid(word, dic):
+    "Test to check if some word is available at the dictionary or not"
+    for bigram in dic: 
+        if bigram == word: return True
+    return False
+
 
 def splits(text, start=0, L=20):
     "Return a list of all (first, rest) pairs; start <= len(first) <= L."
@@ -74,11 +80,11 @@ def segment(text, prev='<S>'):
 segment = memo(segment)
 
 segment.cache.clear()
-segmentedList = segment('thisisazqbhjhsyefvvjqctest')
+segmentedList = segment('jesslookedjustliketimherbrother')
 
-# Test to check if some word is available at the dictionary or not
-# print [bigram for bigram in COUNTS1 if bigram.endswith('tim')]
+phrase = [word if isValid(word, COUNTS1) else word.upper() for word in segmentedList]
 
-print ' '.join(str(e.strip()) for e in segmentedList)
+print ' '.join(str(e.strip()) for e in phrase)
+
 
 
